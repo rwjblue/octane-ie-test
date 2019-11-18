@@ -1,0 +1,15 @@
+<div class="checkbox {{if this.isIndeterminate "indeterminate"}}" ...attributes>
+  <input
+    checked={{@isChecked}}
+    class="hidden"
+    disabled={{@isDisabled}}
+    id={{this.id}}
+    value={{@value}}
+    type="checkbox"
+    {{on "click" this.onClick}}
+  >
+  <span class="bg-white cursor-pointer absolute rounded block pointer-events-none w-5 h-5" />
+  <label for={{this.id}}>
+    {{{yield}}}
+  </label>
+</div>
